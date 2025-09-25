@@ -64,16 +64,16 @@ resource "aws_instance" "app_server" {
 
               # Clone project repo (replace with your actual repo URL)
               # Assuming project code is pushed to GitHub
-              git clone https://github.com/username/project-root.git /home/ubuntu/project-root
+              git clone https://github.com/Aman-Jha-812/terraform.git /home/ubuntu/project-teraform
 
               # Setup Flask backend
-              cd /home/ubuntu/project-root/flask-backend
+              cd /home/ubuntu/project-teraform/flask-backend
               pip3 install -r requirements.txt
               # Run Flask app in background
               nohup python3 app.py &
 
               # Setup Express frontend
-              cd /home/ubuntu/project-root/express-frontend
+              cd /home/ubuntu/project-teraform/express-frontend
               npm install
               pm2 start server.js --name express-app
 
